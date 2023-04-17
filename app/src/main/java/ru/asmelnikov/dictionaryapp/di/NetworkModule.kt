@@ -28,7 +28,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    private fun provideRetrofit(): Retrofit {
+    fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl("https://api.dictionaryapi.dev/")
             .addCallAdapterFactory(NetworkResponseAdapterFactory())
