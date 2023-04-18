@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import ru.asmelnikov.dictionaryapp.common.Resource
 import ru.asmelnikov.dictionaryapp.data.dto.DefinitionResponseModel
+import ru.asmelnikov.dictionaryapp.data.dto.DefinitionResponseModelItem
 import ru.asmelnikov.dictionaryapp.di.IoDispatcher
 import ru.asmelnikov.dictionaryapp.domain.DefinitionRepository
 import javax.inject.Inject
@@ -16,7 +17,7 @@ class DefinitionRepositoryImpl @Inject constructor(
     @IoDispatcher private val ioDispatcher: CoroutineDispatcher
 ) : DefinitionRepository {
 
-    override suspend fun getDefinition(word: String): Flow<Resource<List<DefinitionResponseModel>>> =
+    override suspend fun getDefinition(word: String): Flow<Resource<List<DefinitionResponseModelItem>>> =
         flow {
             emit(Resource.Loading())
 
