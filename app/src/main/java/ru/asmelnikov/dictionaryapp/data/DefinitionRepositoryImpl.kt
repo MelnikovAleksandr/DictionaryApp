@@ -6,7 +6,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import ru.asmelnikov.dictionaryapp.common.Resource
-import ru.asmelnikov.dictionaryapp.data.dto.DefinitionResponseModel
 import ru.asmelnikov.dictionaryapp.data.dto.DefinitionResponseModelItem
 import ru.asmelnikov.dictionaryapp.di.IoDispatcher
 import ru.asmelnikov.dictionaryapp.domain.DefinitionRepository

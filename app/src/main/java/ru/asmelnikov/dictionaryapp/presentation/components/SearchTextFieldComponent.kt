@@ -17,11 +17,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.input.ImeAction
-import ru.asmelnikov.dictionaryapp.R
 import ru.asmelnikov.dictionaryapp.ui.theme.Shapes
 
 @OptIn(ExperimentalComposeUiApi::class)
@@ -67,11 +65,11 @@ fun SearchTextFieldComponent(
         shape = Shapes.small,
         colors = TextFieldDefaults
             .textFieldColors(
-                backgroundColor = Color(R.color.light_gray),
+                backgroundColor = Color(0xFFEBE7E7),
 
-                unfocusedIndicatorColor = Color(R.color.light_gray),
+                unfocusedIndicatorColor = Color(0xFFEBE7E7),
 
-                focusedIndicatorColor = Color(R.color.light_blue)
+                focusedIndicatorColor = Color(0xFF4C7AF2)
             ),
         keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
         keyboardActions = KeyboardActions(

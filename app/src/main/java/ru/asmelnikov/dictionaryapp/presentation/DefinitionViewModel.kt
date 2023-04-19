@@ -27,6 +27,10 @@ class DefinitionViewModel @Inject constructor(
     private val _eventFlow = MutableSharedFlow<UiEvents>()
     val eventFlow: SharedFlow<UiEvents> = _eventFlow.asSharedFlow()
 
+    fun setTypedWord(typedWord: String) {
+        _typedWord.value = typedWord
+    }
+
     fun getDefinition() {
         _definitionUiState.value = definitionUiState.value.copy(
             isLoading = true

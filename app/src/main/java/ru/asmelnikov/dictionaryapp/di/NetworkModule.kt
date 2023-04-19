@@ -37,6 +37,8 @@ object NetworkModule {
             .build()
     }
 
+    @Provides
+    @Singleton
     fun provideDictionary(retrofit: Retrofit): DictionaryApi {
         return retrofit.create()
     }
